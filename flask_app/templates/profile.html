@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0"> <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>User's Profile</title>
+</head>
+<body>
+    <wrapper class="view_profile">
+        <h1>Welcome to {{users.first_name}} {{users.last_name}} Profile Page!</h1>
+        <button onclick="window.location.href='/users/all'">Home</button>
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created On</th>
+                <th>Last Updated On: </th>
+            </tr>
+            <tr>
+                <td>{{ users.first_name }} {{ users.last_name }}</td>
+                <td>{{ users.email }}</td>
+                <td>{{ users.created_at }}</td>
+                <td>{{ users.updated_at }}</td>
+            </tr>
+        </table>
+        <button onclick="window.location.href='/users/{{users.id}}/update'">Edit</button>
+        <button onclick="window.location.href='/users/{{users.id}}/delete'">Delete</button>
+    </wrapper>
+</body>
+</html>

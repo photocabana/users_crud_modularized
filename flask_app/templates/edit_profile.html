@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Edit User's Profile</title>
+</head>
+<body>
+    <wrapper class="edit_profile">
+        <h1>Edit User's Profile</h1>
+        <button onclick="window.location.href='/users/all'">Home</button>
+        <form action="/users/{{users.id}}/update" method="post">
+            <h2>Edit:  {{users.first_name}} {{users.last_name}}</h2>
+            <input type="hidden" name="id" value="{{users.id}}">
+            <label>
+                First Name:
+                <input type="text" name="first_name" value="{{users.first_name}}">
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="last_name" value="{{users.last_name}}">
+            </label>
+            <label>
+                Email:
+                <input type="text" name="email" value="{{users.email}}">
+            </label>
+            <input type="submit" value="Edit User">
+        </form>
+        <button onclick="window.location.href='/users/{{users.id}}/profile'">Profile</button>
+    </wrapper>
+</body>
+</html>

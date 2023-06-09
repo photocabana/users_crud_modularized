@@ -1,0 +1,87 @@
+html {
+    background-color: white;
+}
+
+.all_users {
+    background-image: linear-gradient(to bottom right, rgb(34, 34, 171), rgb(21, 157, 157));
+    color: aliceblue;
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.add_user {
+    background-image: linear-gradient(to bottom right, rgb(16, 103, 58), rgb(175, 108, 8));
+    color: aliceblue;
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.view_profile {
+    background-image: linear-gradient(to bottom right, rgb(182, 58, 26), rgb(100, 35, 94));
+    color: aliceblue;
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.edit_profile {
+    background-image: linear-gradient(to bottom right, rgb(71, 71, 74), rgb(164, 76, 126));
+    color: aliceblue;
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #5f5d5d;
+}
+
+a {
+    color: white;
+}
+
+button {
+    background-color: #797c7c;
+    width: 20%;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+}

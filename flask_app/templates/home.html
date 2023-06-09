@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>All Users</title>
+</head>
+<body>
+    <wrapper class="all_users">
+        <h1>All Users</h1>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+            {% for user in users_all %}
+            <tr>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at }}</td>
+                <td>
+                    <a href="/users/{{user.id}}/profile">Show</a> | 
+                    <a href="/users/{{user.id}}/update">Edit</a> | 
+                    <a href="/users/{{user.id}}/delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button onclick="window.location.href='/'">Add a New User</button>
+    </wrapper>
+</body>
+</html>
+
+
